@@ -1,0 +1,487 @@
+<style>
+   *{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    }
+
+body{   
+    background-color: rgba(236,190,223, 1.0);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+
+#nav{
+    background:linear-gradient(
+  to left,
+  rgba(220, 112, 126, 0.78),
+  rgba(18////0, 162, 145, 0.88),
+  rgba(220, 112, 126, 0.78)
+),
+                url('https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1400') center/cover no-repeat;/
+    min-height:50px;
+    position: relative;
+   
+}
+
+.logo{
+    color:#FFD700;
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:4px;
+    text-shadow:2px 2px 3px rgba(0,0,0,.3);
+    margin:0 170px;
+    white-space:nowrap;
+}
+.neelam-logo{
+   color: white;
+    min-height: 50px;
+    width:60px ;
+
+
+
+}
+.neelam-logo img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.navbar-nav .nav-link{
+    color:#000 !important;
+    font-weight:600;
+    padding:8px 12px;
+}
+
+.navbar-nav .nav-link:hover{
+    color:#8B4513 !important;
+}
+
+.dropdown-menu{
+    border-radius:10px;
+}
+
+.d-flex input{
+    width:220px;
+}
+
+/* Slider */
+
+.slider-box{
+    position:relative;
+    width:100%;
+}
+
+#slider{
+    width:100%;
+    height:350px;
+    overflow:hidden;
+}
+
+#slider img{
+    width:100%;
+    height: 100%;
+}
+
+/* Slider Buttons */
+
+.slider-box button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.6);
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.slider-box button:first-of-type{
+    left:15px;
+}
+
+.slider-box button:last-of-type{
+    right:15px;
+}
+
+.slider-box button:hover{
+    background:#ffc107;
+    color:#000;
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+#nav{
+    height:auto;
+}
+
+.logo{
+    font-size:26px;
+    letter-spacing:2px;
+    margin:10px auto;
+    text-align:center;
+}
+
+.navbar-collapse{
+    background:#cecccf;
+    padding:15px;
+    border-radius:10px;
+}
+
+.d-flex{
+    margin-top:10px;
+}
+
+.d-flex input{
+    width:100%;
+}
+
+#slider{
+    height:320px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+.logo{
+    font-size:22px;
+}
+
+#slider{
+    height:220px;
+}
+
+.slider-box button{
+    width:38px;
+    height:38px;
+}
+
+.navbar-nav{
+    text-align:center;
+}
+}
+.img-box img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-box:hover img{
+    transform:scale(1.3);
+    transition: transform 1s ease;
+}
+.card:hover{
+    transform:translateY(-5///px);
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+     transition: transform 0.8s ease;
+}
+.card{
+    box-shadow: 2px 4px 3px rgba(120, 67, 78, 1.0);
+}
+#contain{
+    background: linear-gradient(rgba(192,57,43,0.75), rgba(230,126,34,0.75)),
+                url('https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1400') center/cover no-repeat;
+    min-height: 360px;
+        }
+.back-img { 
+background: linear-gradient(rgba(192,57,43,0.75), rgba(230,126,34,0.75)),
+                url('https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1400') center/cover no-repeat;
+ min-height: 200px;
+ padding: 20px;
+ text-align: center;
+ color: white;
+ }
+ .back-img div{
+    padding: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+ }
+ .and-1{
+    font-size: 80px;
+ }
+ .multi-logo{
+    background-color: rgba(255,255,247, 1.0);
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 4 ;
+ }
+ #box-4{
+    box-sizing: border-box;
+ }
+ <style>
+   *{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    }
+
+body{   
+    background-color: rgba(236,190,223, 1.0);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+
+#nav{
+    background:linear-gradient(
+  to left,
+  rgba(220, 112, 126, 0.78),
+  rgba(18////0, 162, 145, 0.88),
+  rgba(220, 112, 126, 0.78)
+),
+                url('https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1400') center/cover no-repeat;/
+    min-height:50px;
+    position: relative;
+   
+}
+.slid-text{
+    height: 20px;
+    background: #ffd8a8;
+}
+.logo{
+    color:#FFD700;
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:4px;
+    text-shadow:2px 2px 3px rgba(0,0,0,.3);
+    margin:0 170px;
+    white-space:nowrap;
+}
+.neelam-logo{
+   color: white;
+    min-height: 50px;
+    width:60px ;
+}
+.neelam-logo img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.navbar-nav .nav-link{
+    color:#000 !important;
+    font-weight:600;
+    padding:8px 12px;
+}
+
+.navbar-nav .nav-link:hover{
+    color:#8B4513 !important;
+}
+
+.dropdown-menu{
+    border-radius:10px;
+}
+
+.d-flex input{
+    width:220px;
+}
+
+/* Slider */
+
+.slider-box{
+    position:relative;
+    width:100%;
+}
+
+#slider{
+    width:100%;
+    height:350px;
+    overflow:hidden;
+}
+
+#slider img{
+    width:100%;
+    height: 100%;
+}
+
+/* Slider Buttons */
+
+.slider-box button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.6);
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.slider-box button:first-of-type{
+    left:15px;
+}
+
+.slider-box button:last-of-type{
+    right:15px;
+}
+
+.slider-box button:hover{
+    background:#ffc107;
+    color:#000;
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+#nav{
+    height:auto;
+}
+
+.logo{
+    font-size:26px;
+    letter-spacing:2px;
+    margin:10px auto;
+    text-align:center;
+}
+
+.navbar-collapse{
+    background:#cecccf;
+    padding:15px;
+    border-radius:10px;
+}
+
+.d-flex{
+    margin-top:10px;
+}
+
+.d-flex input{
+    width:100%;
+}
+
+#slider{
+    height:320px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+.logo{
+    font-size:22px;
+}
+
+#slider{
+    height:220px;
+}
+
+.slider-box button{
+    width:38px;
+    height:38px;
+}
+
+.navbar-nav{
+    text-align:center;
+}
+}
+.img-box img{
+    width: 100%;
+    object-fit: cover;
+}
+.img-box{
+    overflow: hidden;
+}
+.img-box:hover img{
+    transform:scale(1.3);
+    transition: transform 1s ease;
+}
+.card:hover{
+    transform:translateY(-5///px);
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+     transition: transform 0.8s ease;
+}
+.card{
+    box-shadow: 2px 4px 3px rgba(120, 67, 78, 1.0);
+    height: 100%;
+    overflow: hidden;
+}
+#contain{
+    background: linear-gradient(rgba(192,57,43,0.75), rgba(230,126,34,0.75)),
+                url('https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1400') center/cover no-repeat;
+    min-height: 360px;
+        }
+        #card-box-container{
+            margin-bottom: 20px;
+        }
+.back-img { 
+background: linear-gradient(rgba(192,57,43,0.75), rgba(230,126,34,0.75)),
+                url('https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1400') center/cover no-repeat;
+ min-height: 200px;
+ padding: 20px;
+ text-align: center;
+ color: white;
+ }
+ .back-img div{
+    padding: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+ }
+ .and-1{
+    font-size: 80px;
+ }
+ .multi-logo{
+    background-color: rgba(255,255,247, 1.0);
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 4 ;
+ }
+ #box-4{
+    box-sizing: border-box;
+ }
+ /* All Product Images Same Size */
+.img-box {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Image Hover */
+.img-box:hover img {
+    transform: scale(1.1);
+    transition: transform 0.8s ease;
+}
+
+/* Card */
+.card {
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 2px 4px 3px rgba(120, 67, 78, 1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.4);
+    transition: transform 0.8s ease;
+}
+.bt-set{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+  /* First Row - Same Image Size */
+
