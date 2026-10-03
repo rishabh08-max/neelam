@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Bootstrap Flip Form</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+   
+    align-items:center;
+   background: linear-gradient(rgba(102,57,43,0.25), rgba(200,126,34,15)),
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMhJ9itR__v-4B6hIIRKDX-5V8LHbDnU0i_EIj3XeF4A&s') center/cover no-repeat;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.scene{
+    width:380px;
+    height:470px;
+    perspective:1200px;
+}
+
+.card-box{
+    width:100%;
+    height:100%;
+    position:relative;
+    transition:1s;
+    transform-style:preserve-3d;
+}
+/* flip is js id*/
+.card-box.flip{
+    transform:rotateY(180deg);
+}
+
+.front,
+.back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    border-radius:20px;
+    background:rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    box-shadow:0 15px 35px rgba(255,255,255,.3);
+    padding:30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.front{
+    transform:rotateY(180deg);
+}
+.back{
+    transform: rotateY(0deg);
+}
+
+.form-control{
+    border-radius:30px;
+}
+
+.btn{
+    border-radius:30px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#0d6efd;
+}
+
+.icon{
+    font-size:60px;
+    text-align:center;
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+p{
+   
+    color:#0d6efd;
+}
+p:hover{
+    cursor: pointer;
+     text-decoration: underline;
+}
+.card-container{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.big-circle{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color: crimson;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-right: 3px solid rgba(255, 215, 0, 1) ;
+    box-sizing: border-box;
+}
+.info-box{
+    height: 450px;
+    width: 350px;
+    position: relative;
+    right: 50px;
+    bottom: 20px;
+
+    
+}
+.logo{
+    color:#FFD700;
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:4px;
+    text-shadow:2px 2px 3px rgba(0,0,0,.3);
+    margin:0 170px;
+    white-space:nowrap;
+}
+.neelam-logo img{
+    width: 150px;
+    height: 150px;
+   position: relative;
+   left: 180px;
+   top: 30px;
+
+}
+.neelam-logo{
+    position: relative;
+    right: 80px;
+}
+span{
+    color: white;
+    display: block;
+    text-align: center;
+}
+</style>
+
+</head>
+<body>
+<div class="big-circle">
+    <div class="info-box">
+    <div class="neelam-logo">
+      <img src="https://www.neelamcoffeehouse.com/img/logo.png">
+     <strong class="logo"><i>Neelam's</i></strong>
+ </div>
+ <span>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+    </div>
+</div>
+<div class="card-container">
+<div class="scene">
+
+<div class="card-box" id="card-box">
+
+<!-- Register Form -->
+
+<div class="back">
+
+<div class="icon">
+📝
+</div>
+
+<h2>Register</h2>
+
+<form>
+
+<div class="mb-3">
+<input type="text" class="form-control" placeholder="Full Name">
+</div>
+
+<div class="mb-3">
+<input type="email" class="form-control" placeholder="Email">
+</div>
+
+<div class="mb-3">
+<input type="password" class="form-control" placeholder="Password">
+</div>
+
+<div class="d-grid">
+<button type="button" class="btn btn-success">Register</button>
+</div>
+</form>
+<p class="text-center mt-4" id="flip-btn">
+Click Again to Login
+</p>
+</div>
+<div class="front">
+
+<div class="icon">
+👤
+</div>
+
+<!-- Login Form -->
+
+<h2>Login</h2>
+
+<form>
+
+<div class="mb-3">
+<input type="email" class="form-control" placeholder="Email">
+</div>
+
+<div class="mb-3">
+<input type="password" class="form-control" placeholder="Password">
+</div>
+
+<div class="d-grid">
+<button class="btn btn-primary">Login</button>
+</div>
+
+</form>
+
+<p class="text-center mt-4" id="Unflip-btn">
+Click Card to Register
+</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script>
+    
+   const card = document.getElementById('card-box');
+const flipbtn = document.getElementById('flip-btn');
+const flipbtn2 = document.getElementById('Unflip-btn');
+
+flipbtn.onclick =function flipped(event) {
+    card.classList.toggle('flip');
+}
+flipbtn2.onclick =function flipped(event) {
+    card.classList.toggle('flip');
+}
+</script>
+</body>
+</html>
